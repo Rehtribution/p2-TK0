@@ -12,7 +12,7 @@
   
   [Installation](## Installation)
   
-  [Author](## Author) 
+  [Authors](## Authors) 
 
   [Contributions](## Contributions)
   
@@ -80,6 +80,9 @@ https://rehtribution.github.io/p2-TK0/
     - Express
     - Sequelize
     - mySQL2
+    - bcrypt
+    - Express-Handlebars
+    - 
 
 ## Installation-Requirements
 - NPM
@@ -93,9 +96,13 @@ In the terminal enter these commands:
 npm i
 ```
 
-## Author
+## Authors
 
-[![GitHub Portfolio -> - Rehtribution](https://img.shields.io/badge/GitHub_Portfolio_-->-Rehtribution-1f425f?style=for-the-badge)](https://github.com/Rehtribution)
+[![GitHub Portfolio -> - Rehtribution](https://img.shields.io/badge/GitHub_Portfolio_-->-Rehtribution-darkred?style=for-the-badge)](https://github.com/Rehtribution)
+
+[![GitHub Portfolio -> - pdguerra12](https://img.shields.io/badge/GitHub_Portfolio_-->-pdguerra12-darkblue?style=for-the-badge)](https://github.com/pdguerra12)
+
+[![GitHub Portfolio -> - alfonsof4](https://img.shields.io/badge/GitHub_Portfolio_-->-alfonsof4-darkgreen?style=for-the-badge)](https://github.com/alfonsof4)
 
 ## Contributions
 
