@@ -1,0 +1,29 @@
+project ideas
+
+
+Time Killer 0
+
+mazes, simple games?
+
+js brick breaker
+https://www.youtube.com/watch?v=PVXwmom3Q8s
+
+embedded js slide puzzle
+https://www.youtube.com/watch?v=eJb-k7ebf8M
+
+npm packages
+	(A simple Node Module which can provide one line joke randomly or from specific tag
+
+This module contains more than 2200 one line jokes.)
+	https://www.npmjs.com/package/one-liner-joke
+	[one-liner-joke --save]
+
+
+game api's saved in rapid api
+
+Free-to-Play Games Database:
+https://rapidapi.com/digiwalls/api/free-to-play-games-database/
+
+Rock Paper Scissors:
+https://rapidapi.com/FaZeTitans/api/rock-paper-scissors5/
+

@@ -74,8 +74,12 @@ https://rehtribution.github.io/p2-TK0/
 - HTML
 - CSS
 - JavaScript
+- Google Fonts
+- Bootstrap
+
 - MySQL
 - Insomnia
+- Heroku
 - NPM
     - Express
     - Sequelize
@@ -83,6 +87,7 @@ https://rehtribution.github.io/p2-TK0/
     - bcrypt
     - Express-Handlebars
     - 
+
 
 ## Installation-Requirements
 - NPM
