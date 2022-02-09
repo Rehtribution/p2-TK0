@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
-//TEST SECTION DELETE AFTER USE
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
@@ -33,7 +32,6 @@ router.get("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
-//TEST SECTION END
 
 // CREATE new user
 router.post("/", async (req, res) => {
@@ -89,5 +87,48 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
+
+router.put('/:id', (req, res) => {
+  // expects {username: 'Username1', password: 'password1234'}
+  // pass in req.body instead to only update what's passed through
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+  User.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 
 module.exports = router;
