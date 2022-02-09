@@ -4,7 +4,7 @@ const { User } = require("../../models");
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
-    attributes: { exclude: ['password'] }
+    attributes: { exclude: ["password"] },
   })
     .then((userData) => res.json(userData))
     .catch((err) => {
@@ -90,47 +90,46 @@ router.post("/logout", (req, res) => {
 });
 
 // change a user
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   // expects {username: 'Username1', password: 'password1234'}
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbUserData => {
+    .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: "No user found with this id" });
         return;
       }
       res.json(dbUserData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
 // delete a user
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbUserData => {
+    .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: "No user found with this id" });
         return;
       }
       res.json(dbUserData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;
