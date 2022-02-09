@@ -4,7 +4,7 @@ const { User } = require("../../models");
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
-    // attributes: { exclude: ['password'] }
+    attributes: { exclude: ['password'] }
   })
     .then((userData) => res.json(userData))
     .catch((err) => {
@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// get one user
 router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
@@ -88,7 +89,7 @@ router.post("/logout", (req, res) => {
   }
 });
 
-
+// change a user
 router.put('/:id', (req, res) => {
   // expects {username: 'Username1', password: 'password1234'}
   // pass in req.body instead to only update what's passed through
@@ -111,6 +112,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete a user
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
