@@ -1,3 +1,12 @@
 const User = require('./User');
+const Highscore = require('./highscore');
 
-module.exports = { User };
+User.hasMany(Highscore, {
+    foreignKey: 'user_id'
+});
+
+Highscore.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
+module.exports = { User, Highscore};
