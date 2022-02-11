@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS placeholder_db;
+DROP DATABASE IF EXISTS tk0_db;
 
-CREATE DATABASE placeholder_db;
+CREATE DATABASE tk0_db;
