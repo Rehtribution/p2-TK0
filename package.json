@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "<h1 align=\"center\">Time Killer 0</h1>",
   "main": "app.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "seeds": "node seeds/index.js"
-
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.16.0"
+    "sequelize": "^6.16.0",
+    "serve": "^13.0.2"
   }
 }
