@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
 });
 
 // get single highscore
-router.get("/post/:id", (req, res) => {
+router.get("/highscore/:id", (req, res) => {
 	Highscore.findOne({
 		where: {
 			id: req.params.id,
