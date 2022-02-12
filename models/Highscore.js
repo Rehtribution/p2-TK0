@@ -5,12 +5,6 @@ class Highscore extends Model {}
 
 Highscore.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     game_title: {
       type: DataTypes.STRING,
       allowNull: false,
