@@ -1,11 +1,11 @@
-async function loginFormHandler(event) {
-  event.preventDefault();
+async function signupFormHandler(event) {
+	event.preventDefault();
 
-	const username = document.querySelector("#user-login").value.trim();
-	const password = document.querySelector("#password-login").value.trim();
+	const username = document.querySelector("#username-signup").value.trim();
+	const password = document.querySelector("#password-signup").value.trim();
 
-	if (username && password) {
-		const response = await fetch("/api/users/login", {
+	if (username && email && password) {
+		const response = await fetch("/api/users", {
 			method: "post",
 			body: JSON.stringify({
 				username,
@@ -13,21 +13,42 @@ async function loginFormHandler(event) {
 			}),
 			headers: { "Content-Type": "application/json" },
 		});
-		
+
+		// check the response status
 		if (response.ok) {
-			console.log("logged in!");
-			document.location.replace("/dashboard/");
+			console.log("success");
 		} else {
-			console.log("wrong password");
+			alert(response.statusText);
+		}
+	}
+}
+
+async function loginFormHandler(event) {
+	event.preventDefault();
+
+	const password = document.querySelector("#password-login").value.trim();
+
+	if (password) {
+		const response = await fetch("/api/users/login", {
+			method: "post",
+			body: JSON.stringify({
+				password,
+			}),
+			headers: { "Content-Type": "application/json" },
+		});
+
+		if (response.ok) {
+			document.location.replace("/dashboard");
+		} else {
 			alert(response.statusText);
 		}
 	}
 }
 
 document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+	.querySelector(".login-form")
+	.addEventListener("submit", loginFormHandler);
 
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+	.querySelector(".signup-form")
+	.addEventListener("submit", signupFormHandler);
