@@ -1,5 +1,5 @@
 const User = require('./User');
-const Highscore = require('./highscore');
+const Highscore = require('./Highscore');
 
 User.hasMany(Highscore, {
     foreignKey: 'user_id'
