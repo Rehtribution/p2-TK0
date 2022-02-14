@@ -1,12 +1,12 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Highscore } = require("../../models");
 
 // get all users
 router.get("/", (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((userData) => res.json(userData))
+    .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -20,13 +20,14 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
+//need to create attributes and creation code for the highscores model and add the include code here to return the users individual highscores
   })
-    .then((userData) => {
-      if (!userData) {
+    .then((dbUserData) => {
+      if (!dbUserData) {
         res.status(404).json({ message: "No user found with this id" });
         return;
       }
-      res.json(userData);
+      res.json(dbUserData);
     })
     .catch((err) => {
       console.log(err);
@@ -40,13 +41,13 @@ router.post("/", async (req, res) => {
     username: req.body.username,
     password: req.body.password,
   })
-    .then((userData) => {
+    .then((dbUserData) => {
       req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.username = userData.username;
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
 
-        res.json(userData);
+        res.json(dbUserData);
       });
     })
     .catch((err) => {
@@ -61,20 +62,26 @@ router.post("/login", async (req, res) => {
     where: {
       username: req.body.username,
     },
-  }).then((userData) => {
-    if (!userData) {
+  }).then((dbUserData) => {
+    if (!dbUserData) {
       res.status(400).json({ message: "Incorrect user ID!" });
       return;
     }
 
-    const validPassword = userData.checkPassword(req.body.password);
+    const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect password!" });
       return;
     }
 
-    res.json({ user: userData, message: "You are now logged in!" });
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: "You are now logged in!" });
+    });
   });
 });
 
