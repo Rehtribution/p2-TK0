@@ -1,7 +1,7 @@
 async function loginFormHandler(event) {
-  event.preventDefault();
+	event.preventDefault();
 
-	const username = document.querySelector("#user-login").value.trim();
+	const username = document.querySelector("#username-login").value.trim();
 	const password = document.querySelector("#password-login").value.trim();
 
 	if (username && password) {
@@ -13,21 +13,18 @@ async function loginFormHandler(event) {
 			}),
 			headers: { "Content-Type": "application/json" },
 		});
-		
+
 		if (response.ok) {
+
+			document.location.replace("/dashboard/");
 			console.log("logged in!");
-			document.location.replace("/");
 		} else {
-			console.log("wrong password");
 			alert(response.statusText);
 		}
 	}
 }
 
 document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+	.querySelector(".login-form")
+	.addEventListener("submit", loginFormHandler);
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit");
