@@ -11,7 +11,7 @@ router.get("/", withAuth, (req, res) => {
 		where: {
 			user_id: req.session.user_id,
 		},
-		attributes: ["id"],
+		attributes: ["game_title", "user_id"],
 		include: [
 			{
 				model: User,
