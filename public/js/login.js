@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
 		
 		if (response.ok) {
 			console.log("logged in!");
-			document.location.replace("/dashboard/");
+			document.location.replace("/");
 		} else {
 			console.log("wrong password");
 			alert(response.statusText);
@@ -30,4 +30,4 @@ document
 
 document
   .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+  .addEventListener("submit");
