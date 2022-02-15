@@ -4,7 +4,7 @@ const { User, Highscore } = require("../models");
 
 // get all highscores for homepage
 router.get("/", (req, res) => {
-	console.log("======================");
+	console.log("req.session");
 	Highscore.findAll({
 		attributes: ["id"],
 		include: [
