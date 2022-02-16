@@ -1,14 +1,22 @@
-const router = require('express').Router();
-const { Highscore } = require('../../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { Highscore, User } = require("../../models");
 
-// get highscore
-router.get('/', (req, res) => {
-    // sort method
-    Highscore.findAll({
-        order: [
-            ['highscore', 'DESC'],
-        ]
-    })
-        .then((highscoreData) => res.json(highscoreData))
-})
+router.get("/", (req, res) => {
+  Highscore.findAll({
+    attributes: ["game_title", "user_id"],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+
+    .then((scores) => res.json(scores))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+module.exports = router;

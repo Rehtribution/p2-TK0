@@ -4,17 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Time Killer 0</title>
-		{{!-- <link rel="stylesheet" href="./css/style.css" /> --}}
+		{{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
 	</head>
 
 	<body>
 		<div class="wrapper">
 			<header>
 				<nav>
+					<div class = "joke-container">
+						joke here
+					</div>
 					<a href="/" class="nav-link">Home</a>
 					{{#if loggedIn}}
 						<a href="/dashboard" class="nav-link">Dashboard</a>
-						<button id="logout" class="logout">Logout</button>
+						<button id="logout" class="btn-no-style">Logout</button>
 					{{else}}
 						<a href="/login">login</a>
 					{{/if}}
@@ -24,6 +27,7 @@
 				</div>
 			</header>
 			<main>
+				<a href="/breakout" class="nav-link">BREAKOUT</a>
 				{{{body}}}
 			</main>
 			<footer>
@@ -34,5 +38,8 @@
 		{{#if loggedIn}}
 			<script src="/js/logout.js"></script>
 		{{/if}}
+
+		{{!-- flow of data 1: loads in the script.js file -> go to script.js --}}
+			<script src="/js/script.js"></script>
 	</body>
 </html>

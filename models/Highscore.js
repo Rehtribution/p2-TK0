@@ -1,16 +1,12 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+//need to add the highscore attributes
 class Highscore extends Model {}
 
+// create the fields and columns for the highscore model
 Highscore.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     game_title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,6 +17,8 @@ Highscore.init(
         model: "user",
         key: "id",
       },
+      //add score column
+      
     },
   },
   {
