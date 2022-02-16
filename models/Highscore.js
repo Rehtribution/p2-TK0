@@ -17,6 +17,8 @@ Highscore.init(
         model: "user",
         key: "id",
       },
+      //add score column
+      
     },
   },
   {
