@@ -11,6 +11,9 @@
 		<div class="wrapper">
 			<header>
 				<nav>
+					<div class = "joke-container">
+						joke here
+					</div>
 					<a href="/" class="nav-link">Home</a>
 					{{#if loggedIn}}
 						<a href="/dashboard" class="nav-link">Dashboard</a>
@@ -35,5 +38,8 @@
 		{{#if loggedIn}}
 			<script src="/js/logout.js"></script>
 		{{/if}}
+
+		{{!-- flow of data 1: loads in the script.js file -> go to script.js --}}
+			<script src="/js/script.js"></script>
 	</body>
 </html>
