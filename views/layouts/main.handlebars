@@ -1,45 +1,57 @@
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Time Killer 0</title>
-		{{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
-	</head>
+<head>
+  <meta charset="utf-8">
+  <title>TK-0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+</head>
 
-	<body>
-		<div class="wrapper">
-			<header>
-				<nav>
-					<div class = "joke-container">
-						joke here
-					</div>
-					<a href="/" class="nav-link">Home</a>
-					{{#if loggedIn}}
-						<a href="/dashboard" class="nav-link">Dashboard</a>
-						<button id="logout" class="btn-no-style">Logout</button>
-					{{else}}
-						<a href="/login">login</a>
-					{{/if}}
-				</nav>
-				<div class="title-container">
-					<h1>Time Killer 0</h1>
-				</div>
-			</header>
-			<main>
-				<a href="/breakout" class="nav-link">BREAKOUT</a>
-				{{{body}}}
-			</main>
-			<footer>
-				Still have time to kill? Stay and play!
-			</footer>
-		</div>
+<body class="dark">
+  <main class="wrapper">
+    <div class="container">
+      <section class="row">
+        <div class="text-center">
+          <div class="">
+            <h1>Time Killer 0</h1>
+            <!--displays title in page-->
+            <p>Description here</p>
 
-		{{#if loggedIn}}
-			<script src="/js/logout.js"></script>
-		{{/if}}
+            {{!-- connect box for the joke --}}
+            <button type="submit" class="getJoke">Joke</button>
+            <textarea id="joke" class="joke-container"  placeholder="Joke here"></textarea>
 
-		{{!-- flow of data 1: loads in the script.js file -> go to script.js --}}
-			<script src="/js/script.js"></script>
-	</body>
+            <div>
+              {{!-- change the nav links to the hex buttons --}}
+              <a href="/" class="nav-link">Home</a>
+              {{#if loggedIn}}
+              <a href="/dashboard" class="nav-link">Dashboard</a>
+              <button id="logout" class="btn-no-style">Logout</button>
+              {{else}}
+              <a href="/login">login</a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <main>
+        <a href="/breakout" class="nav-link">BREAKOUT</a>
+        {{{body}}}
+      </main>
+
+      {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+
+      {{! flow of data 1: loads in the script.js file -> go to script.js }}
+      <script src="/js/script.js"></script>
+</body>
+<footer>
+  Still have time to kill? Stay and play!
+</footer>
+
 </html>

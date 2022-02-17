@@ -18,6 +18,7 @@ router.get("/", (req, res) => {
 			const highscores = HighscoreDb.map((post) => post.get({ plain: true }));
 			console.log(highscores);
 			res.render("homepage", {
+				// ^this renders the homepage. No touch!
 				highscores,
 				loggedIn: req.session.loggedIn,
 			});
