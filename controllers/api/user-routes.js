@@ -80,7 +80,6 @@ router.post("/login", async (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       res.json({ user: dbUserData, message: "You are now logged in!" });
-      res.render('dashboard', { username: req.user.username });
     });
   });
 });
@@ -88,7 +87,6 @@ router.post("/login", async (req, res) => {
 // Logout
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
-    //would req.session = null be a better alternative? This command deletes the cookie as well
     //req.session.destroy deletes the session from the database
     req.session.destroy(() => {
       console.log("session destroyed");
