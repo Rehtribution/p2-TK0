@@ -31,7 +31,7 @@
 <body style="text-align: center">
   <section>
     {{!-- connect box for the joke --}}
-    <button type="submit" class="button">Get A Joke</button>
+    <button type="submit" id="getJoke" class="button">Get A Joke</button>
     <div id="joke" class="joke-container" placeholder="Joke loads here"></div>
   </section>
 
@@ -54,8 +54,8 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 
-  {{! flow of data 1: loads in the script.js file -> go to script.js }}
-  <script src="/js/script.js"></script>
+  {{! flow of data 1: loads in the joke.js file -> go to joke.js }}
+  <script src="/js/joke.js"></script>
 </body>
 
 </html>
