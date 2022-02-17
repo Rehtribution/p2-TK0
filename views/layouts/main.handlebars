@@ -29,26 +29,12 @@
 </header>
 
 <body style="text-align: center">
-  <section>
-    {{!-- connect box for the joke --}}
-    <button type="submit" id="getJoke" class="button">Get A Joke</button>
-    <div id="joke" class="joke-container" placeholder="Joke loads here"></div>
-  </section>
-
-
-
-  <button id="breakout" class="game-button button" onclick="location.href='/breakout';">BREAKOUT
-    {{{body}}}
-  </button>
+  {{{ body }}}
 
   <footer>
     <a href="README.md">ReadMe</a>
     <div class="">Copyright © 2021 TK-0</div>
   </footer>
-
-
-
-
 
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>

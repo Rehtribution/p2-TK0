@@ -3,7 +3,7 @@ const { Highscore, User } = require("../../models");
 
 router.get("/", (req, res) => {
   Highscore.findAll({
-    attributes: ["game_title", "user_id"],
+    attributes: ["game_title", "user_id", "score"],
     include: [
       {
         model: User,

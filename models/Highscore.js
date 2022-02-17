@@ -17,9 +17,11 @@ Highscore.init(
         model: "user",
         key: "id",
       },
-      //add score column
-      
     },
+    score: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   },
   {
     sequelize,
