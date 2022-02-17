@@ -8,50 +8,54 @@
   <link rel="stylesheet" href="/stylesheets/main.css" />
 </head>
 
-<body class="dark">
-  <main class="wrapper">
-    <div class="container">
-      <section class="row">
-        <div class="text-center">
-          <div class="">
-            <h1>Time Killer 0</h1>
-            <!--displays title in page-->
-            <p>Description here</p>
+<header>
+  <div>
+    {{!-- change the nav links to the hex buttons --}}
+    <a href="/" class="nav-link">Home</a>
+    {{#if loggedIn}}
+    <a href="/dashboard" class="nav-link">Dashboard</a>
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">login</a>
+    {{/if}}
+  </div>
+  <div>
+    <h1 class="css-3d-text">Time Killer-0</h1>
+    <p>TimeKiller-0 is a minigame site that allows users to...well, kill a little time!
+      The games are quick and simple with classic concepts like Breakout and some newer ideas like obstacle jumping.
+      Don't forget to get your laughs from our joke generator!
+    </p>
+  </div>
+</header>
 
-            {{!-- connect box for the joke --}}
-            <button type="submit" class="getJoke">Joke</button>
-            <textarea id="joke" class="joke-container"  placeholder="Joke here"></textarea>
-
-            <div>
-              {{!-- change the nav links to the hex buttons --}}
-              <a href="/" class="nav-link">Home</a>
-              {{#if loggedIn}}
-              <a href="/dashboard" class="nav-link">Dashboard</a>
-              <button id="logout" class="btn-no-style">Logout</button>
-              {{else}}
-              <a href="/login">login</a>
-              {{/if}}
-            </div>
-          </div>
-        </div>
-      </section>
-
+<body style="text-align: center">
+  <section>
+    {{!-- connect box for the joke --}}
+    <button type="submit" class="button">Get A Joke</button>
+    <div id="joke" class="joke-container" placeholder="Joke loads here"></div>
+  </section>
 
 
-      <main>
-        <a href="/breakout" class="nav-link">BREAKOUT</a>
-        {{{body}}}
-      </main>
 
-      {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
-      {{/if}}
+  <button id="breakout" class="game-button button" onclick="location.href='/breakout';">BREAKOUT
+    {{{body}}}
+  </button>
 
-      {{! flow of data 1: loads in the script.js file -> go to script.js }}
-      <script src="/js/script.js"></script>
+  <footer>
+    <a href="README.md">ReadMe</a>
+    <div class="">Copyright © 2021 TK-0</div>
+  </footer>
+
+
+
+
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+  {{! flow of data 1: loads in the script.js file -> go to script.js }}
+  <script src="/js/script.js"></script>
 </body>
-<footer>
-  Still have time to kill? Stay and play!
-</footer>
 
 </html>
