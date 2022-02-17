@@ -24,11 +24,11 @@ const hbs = exphbs.create({ helpers });
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(require("./controllers/"));
 app.use(routes);
-
 
 // turn on connection to db and server
 app.listen(PORT, () => {
@@ -36,4 +36,3 @@ app.listen(PORT, () => {
   sequelize.sync({ force: false });
 });
 
-// test commit 

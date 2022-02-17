@@ -3,12 +3,14 @@ const { Highscore } = require('../models');
 
 const scoreData = [
   {
-    game_title: 'Fake Game1',
-    user_id: 1
+    game_title: 'Breakout',
+    user_id: 1,
+    score: 1200
   },
   {
-    game_title: 'Fake Game2',
-    user_id: 2
+    game_title: 'Jump',
+    user_id: 2,
+    score: 2100
   }
 ];
 
