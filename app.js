@@ -36,7 +36,4 @@ app.listen(PORT, () => {
 	sequelize.sync({ force: false });
 });
 
-<<<<<<< HEAD
-=======
 // test commit
->>>>>>> pg2
