@@ -18,6 +18,11 @@
     --sixth: rgb(11, 9, 10);
 }
 
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 
 /* header style start */
 /* Page title  */
@@ -109,27 +114,32 @@ body {
     padding: 20px;
     width: 400px;
     height: 200px;
-    margin-top: 3px;
+    margin: 50px;
 }
 
-#breakout {
-    position: relative;
-    margin: 40px;
-    left: 0;
-}
 
-#jump {
-    position: relative;
-    top:50%;
-    right: 0;
-}
 
 /* game button styles end */
 
+/* scorebox styles */
+.score-box {
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: var(--fourth);
+    border-radius: 10px;
+    border: 3px double var(--fourth);
+    color: var(--first);
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 50px;
+}
 
 /*Footer style*/
 footer {
-    position: relative;
+    margin-top: auto;
     width: 100%;
     bottom: 0;
     text-align: center;
@@ -140,14 +150,6 @@ h3 {
     color: var(--font);
 }
 /* footer style end */
-
-
-
-
-
-
-
-
 
 
 /* media query */

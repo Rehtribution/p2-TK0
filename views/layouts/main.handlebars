@@ -1,6 +1,5 @@
 <html lang="en">
 
-<<<<<<< HEAD
 <head>
   <meta charset="utf-8">
   <title>TK-0</title>
@@ -10,23 +9,24 @@
 </head>
 
 <header>
-  <div>
-    {{!-- change the nav links to the hex buttons --}}
-    <a href="/" class="nav-link">Home</a>
+  {{!-- navigation bar and buttons --}}
+    <nav>
+    <button><a href="/" class="btn-no-style">Home</a></button>
     {{#if loggedIn}}
-    <a href="/dashboard" class="nav-link">Dashboard</a>
+    <button><a href="/dashboard" class="btn-no-style">Dashboard</a></button>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
-    <a href="/login">login</a>
+    <button><a href="/login" class="btn-no-style">login</a></button>
     {{/if}}
-  </div>
-  <div>
+  </nav>
+
+  <section>
     <h1 class="css-3d-text">Time Killer-0</h1>
     <p>TimeKiller-0 is a minigame site that allows users to...well, kill a little time!
       The games are quick and simple with classic concepts like Breakout and some newer ideas like obstacle jumping.
       Don't forget to get your laughs from our joke generator!
     </p>
-  </div>
+  </section>
 </header>
 
 <body style="text-align: center">
@@ -43,58 +43,6 @@
 
   {{! flow of data 1: loads in the joke.js file -> go to joke.js }}
   <script src="/js/joke.js"></script>
-</body>
-=======
-	<head>
-		<meta charset="utf-8" />
-		<title>TK-0</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="/stylesheets/main.css" />
-	</head>
 
-	<header>
-		<div>
-			{{! change the nav links to the hex buttons }}
-			<a href="/" class="nav-link">Home</a>
-			{{#if loggedIn}}
-				<a href="/dashboard" class="nav-link">Dashboard</a>
-				<button id="logout" class="btn-no-style">Logout</button>
-			{{else}}
-				<a href="/login">login</a>
-			{{/if}}
-		</div>
-		<div>
-			<h1 class="css-3d-text">Time Killer-0</h1>
-			<p>TimeKiller-0 is a minigame site that allows users to...well, kill a
-				little time! The games are quick and simple with classic concepts like
-				Breakout and some newer ideas like obstacle jumping. Don't forget to get
-				your laughs from our joke generator!
-			</p>
-		</div>
-	</header>
-
-	<body style="text-align: center">
-		{{{body}}}
-
-		<footer>
-			<a href="README.md">ReadMe</a>
-			<div class="">Copyright © 2022 TK-0</div>
-		</footer>
-
-		{{#if loggedIn}}
-			<script src="/js/logout.js"></script>
-		{{/if}}
-
-		{{! flow of data 1: loads in the joke.js file -> go to joke.js }}
-		<script src="/js/joke.js"></script>
 	</body>
->>>>>>> pg2
-
 </html>
