@@ -79,5 +79,8 @@ router.get("/signup", (req, res) => {
 	}
 });
 
+router.get('/dinojump', (req, res) => {
+	res.render('dinojump');
+});
 
 module.exports = router;
