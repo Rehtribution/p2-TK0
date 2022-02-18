@@ -48,8 +48,11 @@
  }
 
 header {
-    padding: 20px 35px;
     background-color: var(--fourth);
+}
+
+.header-container {
+    text-align: center;
 }
 
 header h1 {
@@ -116,9 +119,6 @@ body {
     height: 200px;
     margin: 50px;
 }
-
-
-
 /* game button styles end */
 
 /* scorebox styles */
