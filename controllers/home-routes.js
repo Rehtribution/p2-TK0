@@ -4,7 +4,7 @@ const { User, Highscore } = require("../models");
 const withAuth = require("../utils/auth");
 
 // get all highscores for homepage
-router.get("/", withAuth, (req, res) => {
+router.get("/", (req, res) => {
 	console.log("req.session");
 	Highscore.findAll({
 		attributes: ["id"],
@@ -68,7 +68,6 @@ router.get("/login", (req, res) => {
 		res.redirect("/");
 		return;
 	}
-
 	res.render("login");
 });
 
