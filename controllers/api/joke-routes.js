@@ -7,7 +7,7 @@ var oneLinerJoke = require("one-liner-joke");
 // this result is requested from the script.js
 router.get("/", (req, res) => {
   var getRandomJoke = oneLinerJoke.getRandomJoke({
-    exclude_tags: ["dirty", "racist", "sex"],
+    exclude_tags: ["dirty", "god", "wife", "racist", "sex", "priest", "acne"],
   });
   // console.log(getRandomJoke.body);
   res.json(getRandomJoke.body);

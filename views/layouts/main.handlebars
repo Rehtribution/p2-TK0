@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="/stylesheets/main.css" />
 </head>
 
-<header>
+<header class="header-container">
   {{!-- navigation bar and buttons --}}
-    <nav>
+  <div class="nav-bar">
     <button><a href="/" class="btn-no-style">Home</a></button>
     {{#if loggedIn}}
     <button><a href="/dashboard" class="btn-no-style">Dashboard</a></button>
@@ -18,7 +18,7 @@
     {{else}}
     <button><a href="/login" class="btn-no-style">login</a></button>
     {{/if}}
-  </nav>
+  </div>
 
   <section>
     <h1 class="css-3d-text">Time Killer-0</h1>
@@ -44,5 +44,6 @@
   {{! flow of data 1: loads in the joke.js file -> go to joke.js }}
   <script src="/js/joke.js"></script>
 
-	</body>
+</body>
+
 </html>
