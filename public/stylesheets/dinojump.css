@@ -17,7 +17,7 @@
     position: relative;
     top: 225px;
     background-image: url(https://dejpknyizje2n.cloudfront.net/marketplace/products/pixel-art-fire-breathing-dinosaur-sticker-1623271634.611956.png);
-    background-size:auto
+    background-size:cover;
 }
 
 #rock {
