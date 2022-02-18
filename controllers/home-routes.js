@@ -1,9 +1,10 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Highscore } = require("../models");
+const withAuth = require("../utils/auth");
 
 // get all highscores for homepage
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
 	console.log("req.session");
 	Highscore.findAll({
 		attributes: ["id"],
@@ -30,7 +31,7 @@ router.get("/", (req, res) => {
 });
 
 // get single highscore
-router.get("/highscore/:id", (req, res) => {
+router.get("/highscore/:id", withAuth, (req, res) => {
 	Highscore.findOne({
 		where: {
 			id: req.params.id,
@@ -80,4 +81,3 @@ router.get("/signup", (req, res) => {
 });
 
 module.exports = router;
-

@@ -22,7 +22,7 @@ router.get("/", withAuth, (req, res) => {
 		.then((HighscoreDb) => {
 			const highscores = HighscoreDb.map((post) => post.get({ plain: true }));
 			console.log(highscores);
-			res.render("dashboard", { highscores, loggedIn: true });
+			res.render("layouts/dashboard", { highscores, loggedIn: true });
 		})
 		.catch((err) => {
 			console.log(err);
