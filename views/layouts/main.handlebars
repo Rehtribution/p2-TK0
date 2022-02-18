@@ -1,57 +1,54 @@
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>TK-0</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets/main.css" />
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<title>TK-0</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+	</head>
 
-<body class="dark">
-  <main class="wrapper">
-    <div class="container">
-      <section class="row">
-        <div class="text-center">
-          <div class="">
-            <h1>Time Killer 0</h1>
-            <!--displays title in page-->
-            <p>Description here</p>
+	<header>
+		<div>
+			{{! change the nav links to the hex buttons }}
+			<a href="/" class="nav-link">Home</a>
+			{{#if loggedIn}}
+				<a href="/dashboard" class="nav-link">Dashboard</a>
+				<button id="logout" class="btn-no-style">Logout</button>
+			{{else}}
+				<a href="/login">login</a>
+			{{/if}}
+		</div>
+		<div>
+			<h1 class="css-3d-text">Time Killer-0</h1>
+			<p>TimeKiller-0 is a minigame site that allows users to...well, kill a
+				little time! The games are quick and simple with classic concepts like
+				Breakout and some newer ideas like obstacle jumping. Don't forget to get
+				your laughs from our joke generator!
+			</p>
+		</div>
+	</header>
 
-            {{!-- connect box for the joke --}}
-            <button type="submit" class="getJoke">Joke</button>
-            <textarea id="joke" class="joke-container"  placeholder="Joke here"></textarea>
+	<body style="text-align: center">
+		{{{body}}}
 
-            <div>
-              {{!-- change the nav links to the hex buttons --}}
-              <a href="/" class="nav-link">Home</a>
-              {{#if loggedIn}}
-              <a href="/dashboard" class="nav-link">Dashboard</a>
-              <button id="logout" class="btn-no-style">Logout</button>
-              {{else}}
-              <a href="/login">login</a>
-              {{/if}}
-            </div>
-          </div>
-        </div>
-      </section>
+		<footer>
+			<a href="README.md">ReadMe</a>
+			<div class="">Copyright © 2022 TK-0</div>
+		</footer>
 
+		{{#if loggedIn}}
+			<script src="/js/logout.js"></script>
+		{{/if}}
 
-
-      <main>
-        <a href="/breakout" class="nav-link">BREAKOUT</a>
-        {{{body}}}
-      </main>
-
-      {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
-      {{/if}}
-
-      {{! flow of data 1: loads in the script.js file -> go to script.js }}
-      <script src="/js/script.js"></script>
-</body>
-<footer>
-  Still have time to kill? Stay and play!
-</footer>
+		{{! flow of data 1: loads in the joke.js file -> go to joke.js }}
+		<script src="/js/joke.js"></script>
+	</body>
 
 </html>

@@ -20,6 +20,7 @@ var brickOffSetTop = 30;
 var brickOffSetLeft = 30;
 var score = 0;
 var lives = 3;
+var stopBall = false;
 
 var bricks = [];
 for (let c = 0; c < brickColumnCount; c++) {
@@ -99,6 +100,9 @@ function drawPaddle() {
 function collisonDetection() {
 	for (var c = 0; c < brickColumnCount; c++) {
 		for (var r = 0; r < brickRowCount; r++) {
+			if (stopBall) {
+				break;
+			}
 			var b = bricks[c][r];
 			if (b.status == 1) {
 				if (
@@ -149,8 +153,12 @@ function draw() {
 		} else {
 			lives = lives - 1;
 			if (!lives) {
-				alert("GAME OVER!");
-				document.location.reload();
+				// alert("GAME OVER!");
+				stopBall = true;
+				ballRadius = 0;
+				lives = 4;
+				$("#breakout-modal2").modal("show");
+				// document.location.reload();
 			} else {
 				x = canvas.width / 2;
 				y = canvas.height - 30;
@@ -174,3 +182,14 @@ function draw() {
 }
 
 setInterval(draw, 10);
+
+var saveScores = function () {
+	localStorage.setItem("highscores", score);
+};
+
+var closeModal = document.querySelector(".close-button");
+closeModal.addEventListener("click", function (e) {
+	$("#breakout-modal2").modal("hide");
+	draw();
+	document.location.reload();
+});
