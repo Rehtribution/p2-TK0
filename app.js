@@ -1,5 +1,5 @@
 const path = require("path");
-const routes = require('./controllers/');
+const routes = require("./controllers/");
 const session = require("express-session");
 const express = require("express");
 const exphbs = require("express-handlebars");
@@ -10,13 +10,13 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
-  secret: "DB_PASSWORD",
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
+	secret: "DB_PASSWORD",
+	cookie: {},
+	resave: false,
+	saveUninitialized: true,
+	store: new SequelizeStore({
+		db: sequelize,
+	}),
 };
 
 app.use(session(sess));
@@ -32,7 +32,11 @@ app.use(routes);
 
 // turn on connection to db and server
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
+	console.log(`App listening on port ${PORT}!`);
+	sequelize.sync({ force: false });
 });
 
+<<<<<<< HEAD
+=======
+// test commit
+>>>>>>> pg2
