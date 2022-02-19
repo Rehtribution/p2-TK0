@@ -31,9 +31,7 @@ setInterval(() => {
 	}
 
 	if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
-		// alert("You got a score of: " + score.innerText + "\n\nPlay again?");
 		$("#breakout-modal").modal("show");
-		// location.reload();
 	}
 }, 50);
 
