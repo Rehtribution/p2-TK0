@@ -157,8 +157,7 @@ function draw() {
 				stopBall = true;
 				ballRadius = 0;
 				lives = 4;
-				$("#breakout-modal2").modal("show");
-				// document.location.reload();
+				$("#breakout-modal").modal("show");
 			} else {
 				x = canvas.width / 2;
 				y = canvas.height - 30;
@@ -183,13 +182,13 @@ function draw() {
 
 setInterval(draw, 10);
 
-var saveScores = function () {
-	localStorage.setItem("highscores", score);
-};
+// var saveScores = function () {
+// 	localStorage.setItem("highscores", score);
+// };
 
 var closeModal = document.querySelector(".close-button");
 closeModal.addEventListener("click", function (e) {
-	$("#breakout-modal2").modal("hide");
+	$("#breakout-modal").modal("hide");
 	draw();
 	document.location.reload();
 });
