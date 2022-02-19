@@ -34,11 +34,18 @@ I AM GIVEN a more personal experience.
 
 
 ## Screenshot/Media
-<h3 align="center">Link to Demo</h3>
+
+<h3 align="center">Login</h3>
 
 ![login-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Login.gif)
+
+<h3 align="center">Signup</h3>
+
 ![signup-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Signup.gif)
-![responsive-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Responsive.gif)
+
+<h3 align="center">Responsive Layout</h3>
+
+![responsive-gif](https://github.com/Rehtribution/p2-TK0/blob/6da3b2001af836f8028bea9e9e4b23075f8d309e/public/media/Responsive.gif)
 
 
 
