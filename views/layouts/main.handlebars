@@ -1,49 +1,65 @@
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>TK-0</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets/main.css" />
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<title>TK-0</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+	</head>
 
-<header class="header-container">
-  {{!-- navigation bar and buttons --}}
-  <div class="nav-bar">
-    <button><a href="/" class="btn-no-style">Home</a></button>
-    {{#if loggedIn}}
-    <button><a href="/dashboard" class="btn-no-style">Dashboard</a></button>
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <button><a href="/login" class="btn-no-style">login</a></button>
-    {{/if}}
-  </div>
+	<header class="header-container">
+		{{! navigation bar and buttons }}
+		<div class="nav-bar">
+			<button><a href="/" class="btn-no-style">Home</a></button>
+			{{#if loggedIn}}
+				<button><a href="/dashboard" class="btn-no-style">Dashboard</a></button>
+				<button id="logout" class="btn-no-style">Logout</button>
+			{{else}}
+				<button><a href="/login" class="btn-no-style">login</a></button>
+			{{/if}}
+		</div>
 
-  <section>
-    <h1 class="css-3d-text">Time Killer-0</h1>
-    <p>TimeKiller-0 is a minigame site that allows users to...well, kill a little time!
-      The games are quick and simple with classic concepts like Breakout and some newer ideas like obstacle jumping.
-      Don't forget to get your laughs from our joke generator!
-    </p>
-  </section>
-</header>
+		<section>
+			<h1 class="css-3d-text">Time Killer-0</h1>
+			<p>TimeKiller-0 is a minigame site that allows users to...well, kill a
+				little time! The games are quick and simple with classic concepts like
+				Breakout and some newer ideas like obstacle jumping. Don't forget to get
+				your laughs from our joke generator!
+			</p>
+		</section>
+	</header>
 
-<body style="text-align: center">
-  {{{ body }}}
+	<body style="text-align: center">
+		{{{body}}}
 
-  <footer>
-    <a href="README.md">ReadMe</a>
-    <div class="">Copyright © 2021 TK-0</div>
-  </footer>
+		<footer>
+			<a href="README.md">ReadMe</a>
+			<div class="">Copyright © 2021 TK-0</div>
+		</footer>
 
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+		{{#if loggedIn}}
+			<script src="/js/logout.js"></script>
+		{{/if}}
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
 
-  {{! flow of data 1: loads in the joke.js file -> go to joke.js }}
-  <script src="/js/joke.js"></script>
+		{{! flow of data 1: loads in the joke.js file -> go to joke.js }}
+		<script src="/js/joke.js"></script>
 
-</body>
+	</body>
 
 </html>
