@@ -20,22 +20,36 @@
 <h2 align="center">User Story</h2>
 
 ```
-Time killer
+AS A bored person,
+I WANT a way to have fun,
+SO THAT I can decompress and refresh my mood,
+WHEN I visit TK-0,
+I AM GIVEN quick and easy games to play,
+WHEN I create an account,
+I AM GIVEN access to a UserDashboard,
+WHEN I navigate to the Dashboard,
+I AM GIVEN a more personal experience.
 ```
 
 
 
 ## Screenshot/Media
 <h3 align="center">Link to Demo</h3>
-<h3 align="center">LINK HERE</h3>
-<h3 align="center" alt="responsive layout video">https://drive.google.com/file/d/12qv7j0A-IikyH17WqvZ3vfjEYi6olvFn/view</h3>
+
+![login-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Login.gif)
+![signup-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Signup.gif)
+![responsive-gif](https://github.com/Rehtribution/p2-TK0/blob/75666e094b6e491ff3873539ea8ebf64d7a1b364/public/media/Responsive.gif)
+
 
 
 ## Deployed Link
-https://rehtribution.github.io/p2-TK0/
+[![Heroku-Link - ClickHere](https://img.shields.io/badge/HerokuLink-ClickHere-purple?style=for-the-badge)](https://timekiller-0.herokuapp.com/)
+
+
+[![GitHub-Link - ClickHere](https://img.shields.io/badge/GitHub--Link-ClickHere-blue?style=for-the-badge)](https://rehtribution.github.io/p2-TK0/)
 
 ## Usage
-1. ```TBD```
+Open the app and play the games!
 
 
 
@@ -84,4 +98,4 @@ npm i
 
 ## Contributions
 
-
+Assistance from Alex, Madison, Katherine, Reid, and tutors.
