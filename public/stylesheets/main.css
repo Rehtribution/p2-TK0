@@ -30,22 +30,22 @@
     font-size: 86px;
     color: #bd1900;
     font-family: Impact, Charcoal, sans-serif;
-    text-shadow: 0px 0px 0 rgb(171,7,0),
-                 0px 1px 0 rgb(153,-11,0),
-                 0px 2px 0 rgb(135,-29,0),
-                 0px 3px 0 rgb(117,-47,0),
-                 0px 4px 0 rgb(99,-65,0),
-                 0px 5px 0 rgb(81,-83,0),
-                 0px 6px 0 rgb(63,-101,0),
-                 0px 7px 0 rgb(45,-119,0),
-                 0px 8px 0 rgb(27,-137,0),
-                 0px 9px 0 rgb(9,-155,0),
-                 0px 10px 0 rgb(-9,-173,0),
-                 0px 11px  0 rgb(-27,-191,0),
-                 0px 12px 11px rgba(255,255,255,0.66),
-                 0px 12px 1px rgba(255,255,255,0.5),
-                 0px 0px 11px rgba(255,255,255,.2);
- }
+    text-shadow: 0px 0px 0 rgb(171, 7, 0),
+        0px 1px 0 rgb(153, -11, 0),
+        0px 2px 0 rgb(135, -29, 0),
+        0px 3px 0 rgb(117, -47, 0),
+        0px 4px 0 rgb(99, -65, 0),
+        0px 5px 0 rgb(81, -83, 0),
+        0px 6px 0 rgb(63, -101, 0),
+        0px 7px 0 rgb(45, -119, 0),
+        0px 8px 0 rgb(27, -137, 0),
+        0px 9px 0 rgb(9, -155, 0),
+        0px 10px 0 rgb(-9, -173, 0),
+        0px 11px 0 rgb(-27, -191, 0),
+        0px 12px 11px rgba(255, 255, 255, 0.66),
+        0px 12px 1px rgba(255, 255, 255, 0.5),
+        0px 0px 11px rgba(255, 255, 255, .2);
+}
 
 header {
     background-color: var(--fourth);
@@ -80,28 +80,31 @@ body {
 
 /* button styles start */
 .button {
-	box-shadow: -5px 5px 2px -2px #8f4444;
-	background:linear-gradient(to bottom, #cc0000 5%, #b59f9f 100%);
-	background-color:#cc0000;
-	border-radius:7px;
-	border:1px solid #d4baba;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Impact;
-	font-size:23px;
-	padding:8px 25px;
-	text-decoration:none;
-	text-shadow:0px 0px 0px #e8dada;
+    box-shadow: -5px 5px 2px -2px #8f4444;
+    background: linear-gradient(to bottom, #cc0000 5%, #b59f9f 100%);
+    background-color: #cc0000;
+    border-radius: 7px;
+    border: 1px solid #d4baba;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Impact;
+    font-size: 23px;
+    padding: 8px 25px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #e8dada;
 }
+
 .button:hover {
-	background:linear-gradient(to bottom, #b59f9f 5%, #cc0000 100%);
-	background-color:#b59f9f;
+    background: linear-gradient(to bottom, #b59f9f 5%, #cc0000 100%);
+    background-color: #b59f9f;
 }
+
 .button:active {
-	position:relative;
-	top:1px;
+    position: relative;
+    top: 1px;
 }
+
 /* button styles end */
 
 /* game button styles */
@@ -119,6 +122,7 @@ body {
     height: 200px;
     margin: 50px;
 }
+
 /* game button styles end */
 
 /* scorebox styles */
@@ -144,42 +148,56 @@ footer {
     bottom: 0;
     text-align: center;
     color: var(--font);
-  }
-  
+}
+
 h3 {
     color: var(--font);
 }
+
 /* footer style end */
 
 
 /* media query */
 @media screen and (max-width: 475px) {
-    body {
-        text-align: center;
-    }
-    
-    nav {
+    header {
         width: 100%;
     }
-    header nav ul li a {
-        margin: 0;
+
+    header {
+        max-height: 10em auto !important;
     }
 
-    nav ul {
-        display: flex;
-        flex: row;
-        justify-content: space-between !important;
+    .hide-when-narrow {
+        display: none;
     }
-    
-    iframe {
-        width: 80% !important;
-        height: auto;
+
+    body {
+        min-height: 100%;
+        margin: 0 auto !important;
+        width: 100%;
+        text-align: center;
     }
+
+    .game-button {
+        margin: 0 auto !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    canvas {
+        width: 100%
+    }
+
+    .modal {
+        width: 100% auto !important;
+        text-align: center;
+    }
+
     section {
         width: 100%;
     }
+
     .section-title {
         width: 100%;
     }
 }
-
