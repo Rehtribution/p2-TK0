@@ -56,9 +56,10 @@ I AM GIVEN a more personal experience.
 [![GitHub-Link - ClickHere](https://img.shields.io/badge/GitHub--Link-ClickHere-blue?style=for-the-badge)](https://rehtribution.github.io/p2-TK0/)
 
 ## Usage
+
+TimeKiller-0 is a minigame site that allows users to...well, kill a little time!
+The games are quick and simple with classic concepts like Breakout and box jumper, in addition to some newer ideas like obstacle jumpers.
 Open the app and play the games!
-
-
 
 ## Built With
 
