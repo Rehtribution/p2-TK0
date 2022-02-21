@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Highscore, User } = require("../../models");
 
-router.get("/", (req, res) => {
+router.get("/highscore", (req, res) => {
   Highscore.findAll({
     attributes: ["game_title", "user_id", "score"],
     include: [

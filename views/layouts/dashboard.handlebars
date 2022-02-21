@@ -5,17 +5,22 @@
 	{{/if}}
 </div> --}}
 
+	<section>
+		<button type="submit" id="getJoke" class="button">Get A Joke</button>
+		<div id="joke" class="joke-container" placeholder="Joke loads here"></div>
+	</section>
 
 <button class="score-box">BREAKOUT HIGHSCORE
-	<p>40</p>
+	<h2></h2>
+	<p id="breakout-score" class="score">SCORE</p>
 	WANNA REDEEM YOURSELF?<br>
 	<btn id="breakout" class="button"onclick="location.href='/api/breakout';">YES</btn>
 </button>
 
 <button class="score-box">JUMP HIGHSCORE
-	<p>200</p>
+	<p></p>
 	WANNA REDEEM YOURSELF?<br>
 	<btn id="jump" class="button" onclick="location.href='/api/dinojump';">YES</btn>
 </button>
 
-{{ footer}}
+{{ footer }}
