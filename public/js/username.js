@@ -1,12 +1,22 @@
-// function showUser(){
+//not working YET
+function user() {
     
-// let displayName = document.querySelector(".displayName-container")
-// console.log(displayName.innerText)
+    let displayName = document.querySelector(".displayName-container")
+    
+    fetch('/api/users')
+    .then(response => response.json())
+    .then(data => displayName)
+}
+user()
 
-// fetch('/api/users')
-//     // returns the response from the api/jokes
+
+
+
+// function showUser(){
+
+//     fetch('/api/users')
 //     .then(response => response.json())
-//     .then(data => displayName.innerText = decodeURI(data));
+//     .then(data => displayName.innerText;
 //     res.render("dashboard", {
 //         userName : req.user.Name,
 //     });

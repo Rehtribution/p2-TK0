@@ -12,7 +12,10 @@ router.get("/", (req, res) => {
     ],
   })
 
-    .then((scores) => res.json(scores))
+    .then((scores) => {
+      res.json(scores)
+     
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

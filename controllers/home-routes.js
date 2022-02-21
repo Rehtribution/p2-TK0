@@ -16,6 +16,7 @@ router.get("/", (req, res) => {
 		],
 	})
 		.then((HighscoreDb) => {
+			
 			const highscores = HighscoreDb.map((post) => post.get({ plain: true }));
 			console.log(highscores);
 			res.render("homepage", {
@@ -65,6 +66,7 @@ router.get("/highscore/:id", withAuth, (req, res) => {
 
 router.get("/login", (req, res) => {
 	if (req.session.loggedIn) {
+		
 		res.redirect("/");
 		return;
 	}
