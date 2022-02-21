@@ -2,20 +2,19 @@
 
 <h2 align="center">Table of Contents</h2>
 
-  [Media](## Screenshot/Media)
-  
-  [Usage](## Usage)
-  
-  [Built-With](## Built With)
-  
-  [Installation-Requirements](## Installation-Requirements)
-  
-  [Installation](## Installation)
-  
-  [Authors](## Authors) 
+- [Media](#screenshot/media)
 
-  [Contributions](## Contributions)
-  
+- [Usage](#usage)
+
+- [Built With](#built-with)
+
+- [Installation-Requirements](#installation-requirements)
+
+- [Installation](#installation)
+
+- [Authors](#authors)
+
+- [Contributions](#contributions)
 
 <h2 align="center">User Story</h2>
 
@@ -31,8 +30,6 @@ WHEN I navigate to the Dashboard,
 I AM GIVEN a more personal experience.
 ```
 
-
-
 ## Screenshot/Media
 
 <h3 align="center">Login</h3>
@@ -47,11 +44,9 @@ I AM GIVEN a more personal experience.
 
 ![responsive-gif](https://github.com/Rehtribution/p2-TK0/blob/6da3b2001af836f8028bea9e9e4b23075f8d309e/public/media/Responsive.gif)
 
-
-
 ## Deployed Link
-[![Heroku-Link - ClickHere](https://img.shields.io/badge/HerokuLink-ClickHere-purple?style=for-the-badge)](https://timekiller-0.herokuapp.com/)
 
+[![Heroku-Link - ClickHere](https://img.shields.io/badge/HerokuLink-ClickHere-purple?style=for-the-badge)](https://timekiller-0.herokuapp.com/)
 
 [![GitHub-Link - ClickHere](https://img.shields.io/badge/GitHub--Link-ClickHere-blue?style=for-the-badge)](https://rehtribution.github.io/p2-TK0/)
 
@@ -73,25 +68,27 @@ Open the app and play the games!
 - Insomnia
 - Heroku
 - NPM
-    - Express
-    - Sequelize
-    - mySQL2
-    - bcrypt
-    - Express-Handlebars
-    - One-liner-joke
-
+  - Express
+  - Sequelize
+  - mySQL2
+  - bcrypt
+  - Express-Handlebars
+  - One-liner-joke
 
 ## Installation-Requirements
+
 - NPM
-    - Express
-    - Sequelize
-    - mySQL2
-    - bcrypt
-    - Express-Handlebars
-    - One-liner-joke
-    
+  - Express
+  - Sequelize
+  - mySQL2
+  - bcrypt
+  - Express-Handlebars
+  - One-liner-joke
+
 ## Installation
+
 In the terminal enter these commands:
+
 ```
 npm i
 ```
