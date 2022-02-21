@@ -16,50 +16,52 @@ highscore()
 
 
 
+// scores from db not working YET but good chance I think
+async function renderScores() {
+    let users = await getHighscores();
+    let html = '';
+    users.forEach(score => {
+        let htmlSegment = `<button class="score-box">
+                            
+                            <h2>${users.username} ${users.score}</h2>
+                        </button>`;
 
+        html += htmlSegment;
+    });
 
-function printHighscores() {
-    // either get scores from localstorage or set to empty array
-	var highscores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-    
-	// sort highscores by score property in descending order
-	highscores.sort(function (a, b) {
-        return b.score - a.score;
-	});
-    
-	highscores.forEach(function (score) {
-        // create li tag for each high score
-		var liTag = document.createElement("li");
-		liTag.textContent = score.initials + " - " + score.score;
-        
-		// display on page
-		var olEl = document.getElementById("highscores");
-		olEl.appendChild(liTag);
-	});
+    let container = document.querySelector('.container');
+    container.innerHTML = html;
 }
 
-// run function when page loads
-printHighscores();
 
 
+// scores from local storage
 
-
-// not working YET but good chance I think
-// async function renderScores() {
-//     let users = await getHighscores();
-//     let html = '';
-//     users.forEach(score => {
-//         let htmlSegment = `<button class="score-box">
-                            
-//                             <h2>${users.username} ${users.score}</h2>
-//                         </button>`;
-
-//         html += htmlSegment;
-//     });
-
-//     let container = document.querySelector('.container');
-//     container.innerHTML = html;
+// function printHighscores() {
+//     // either get scores from localstorage or set to empty array
+// 	var highscores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+    
+// 	// sort highscores by score property in descending order
+// 	highscores.sort(function (a, b) {
+//         return b.score - a.score;
+// 	});
+    
+// 	highscores.forEach(function (score) {
+//         // create li tag for each high score
+// 		var liTag = document.createElement("li");
+// 		liTag.textContent = score.initials + " - " + score.score;
+        
+// 		// display on page
+// 		var olEl = document.getElementById("highscores");
+// 		olEl.appendChild(liTag);
+// 	});
 // }
+
+// // run function when page loads
+// printHighscores();
+
+
+
 
 
 
