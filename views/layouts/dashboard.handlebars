@@ -1,21 +1,35 @@
-{{!-- under construction rc --}}
-{{!-- <div>
+{{! under construction rc }}
+<div>
 	<p class="css-3d-text">{{username}}</p>
 	{{#if loggedIn}}
+
+		<button class="score-box">BREAKOUT HIGHSCORE
+			<p>40</p>
+			WANNA REDEEM YOURSELF?<br />
+			<btn
+				id="breakout"
+				class="button"
+				onclick="location.href='/api/breakout';"
+			>YES</btn>
+		</button>
+
+		<button class="score-box">JUMP HIGHSCORE
+			<p>200</p>
+			WANNA REDEEM YOURSELF?<br />
+			<btn
+				id="jump"
+				class="button"
+				onclick="location.href='/api/dinojump';"
+			>YES</btn>
+		</button>
+
+		<h1>Highscores</h1>
+		<ol id="highscores"></ol>
+
 	{{/if}}
-</div> --}}
+</div>
 
+{{footer}}
 
-<button class="score-box">BREAKOUT HIGHSCORE
-	<p>40</p>
-	WANNA REDEEM YOURSELF?<br>
-	<btn id="breakout" class="button"onclick="location.href='/api/breakout';">YES</btn>
-</button>
-
-<button class="score-box">JUMP HIGHSCORE
-	<p>200</p>
-	WANNA REDEEM YOURSELF?<br>
-	<btn id="jump" class="button" onclick="location.href='/api/dinojump';">YES</btn>
-</button>
-
-{{ footer}}
+<script src="/seeds/highscore-seeds.js"></script>
+<script src="/js/highscore.js"></script>
