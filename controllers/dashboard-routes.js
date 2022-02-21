@@ -5,13 +5,15 @@ const withAuth = require("../utils/auth");
 
 // get all highscores for dashboard
 router.get("/", withAuth, (req, res) => {
+	//bringing the username up to the front to access
 	console.log('===================', req.session.username);
 	let user = req.session.username
+
 	Highscore.findAll({
 		where: {
 			user_id: req.session.user_id,
 		},
-		attributes: ["game_title", "user_id"],
+		attributes: ["game_title", "user_id", "score"],
 		include: [
 			{
 				model: User,

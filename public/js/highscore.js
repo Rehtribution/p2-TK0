@@ -1,23 +1,52 @@
-//games highscores will be pulled from local storage and user session? then follow the connected routes using the model set up
-//intending to reference the code quiz highscore.js
+// WORKING 
+const highscore = () => {
+    fetch("/api/highscore")
+        // .then(response => {
+        //     response.json()
+        //     console.log(response);
+        // })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+
+        })
+}
+highscore()
+// WORKING END 
+
+
+// not working YET but good chance I think
+async function renderScores() {
+    let users = await getHighscores();
+    let html = '';
+    users.forEach(score => {
+        let htmlSegment = `<button class="score-box">
+                            
+                            <h2>${users.username} ${users.score}</h2>
+                        </button>`;
+
+        html += htmlSegment;
+    });
+
+    let container = document.querySelector('.container');
+    container.innerHTML = html;
+}
+
+
+
+
+
+
+
+
+
+
+// failed attempts
+
+
 // window.onload = () => {
 //     getScore();
 // }
-
-const highscore = () => {
-    fetch("/api/highscore")
-    // .then(response => {
-    //     response.json()
-    //     console.log(response);
-    // })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        
-    })
-}
-
-highscore()
 
 // function getScore() {
 //     let breakoutScore = document.querySelector(".breakout-score")
@@ -44,21 +73,5 @@ highscore()
 //         console.log(error);
 //     }
 // }
-
-async function renderScores() {
-    let users = await getHighscores();
-    let html = '';
-    users.forEach(score => {
-        let htmlSegment = `<button class="score-box">
-                            
-                            <h2>${users.username} ${users.score}</h2>
-                        </button>`;
-
-        html += htmlSegment;
-    });
-
-    let container = document.querySelector('.container');
-    container.innerHTML = html;
-}
 
 // renderUsers();

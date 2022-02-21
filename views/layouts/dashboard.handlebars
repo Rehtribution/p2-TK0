@@ -1,20 +1,20 @@
 {{!-- under construction rc --}}
-{{!-- <div>
-	<p class="css-3d-text">{{username}}</p>
+<div>
+	<p class="displayName-container">{{username}}</p>
 	{{#if loggedIn}}
 	{{/if}}
-</div> --}}
+</div>
 
-	<section>
-		<button type="submit" id="getJoke" class="button">Get A Joke</button>
-		<div id="joke" class="joke-container" placeholder="Joke loads here"></div>
-	</section>
+<section>
+	<button type="submit" id="getJoke" class="button">Get A Joke</button>
+	<div id="joke" class="joke-container" placeholder="Joke loads here"></div>
+</section>
 
 <button class="score-box">BREAKOUT HIGHSCORE
 	<h2></h2>
 	<p id="breakout-score" class="score">SCORE</p>
 	WANNA REDEEM YOURSELF?<br>
-	<btn id="breakout" class="button"onclick="location.href='/api/breakout';">YES</btn>
+	<btn id="breakout" class="button" onclick="location.href='/api/breakout';">YES</btn>
 </button>
 
 <button class="score-box">JUMP HIGHSCORE
