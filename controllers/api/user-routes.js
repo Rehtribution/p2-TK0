@@ -20,6 +20,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
+    include: [Highscore]
 //need to create attributes and creation code for the highscores model and add the include code here to return the users individual highscores
   })
     .then((dbUserData) => {

@@ -4,12 +4,20 @@
 //     getScore();
 // }
 
-// const highscore = () => {
-//     console.log(fetch('/api/highscore'))
-//     .then((response) => {
-//         console.log(response);
-//     })
-// }
+const highscore = () => {
+    fetch("/api/highscore")
+    // .then(response => {
+    //     response.json()
+    //     console.log(response);
+    // })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        
+    })
+}
+
+highscore()
 
 // function getScore() {
 //     let breakoutScore = document.querySelector(".breakout-score")
@@ -27,15 +35,15 @@
 // getScore();
 
 
-async function getHighscores() {
-    let url = '/api/highscore';
-    try {
-        let res = await fetch(url);
-        return await res.json();
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function getHighscores() {
+//     let url = '/api/highscore';
+//     try {
+//         let res = await fetch(url);
+//         return await res.json();
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 async function renderScores() {
     let users = await getHighscores();
@@ -53,4 +61,4 @@ async function renderScores() {
     container.innerHTML = html;
 }
 
-renderUsers();
+// renderUsers();
